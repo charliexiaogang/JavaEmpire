@@ -8,11 +8,11 @@ import java.io.IOException;
  * @author charlie
  * @since 2021-04-03 11:57
  */
-@WebServlet("/demo02")
+// @WebServlet("/demo01")
 public class ServletDemo01 implements Servlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
-
+        System.out.println("init方法被调用了..." + config.getInitParameter("package"));
     }
 
     @Override
@@ -22,7 +22,7 @@ public class ServletDemo01 implements Servlet {
 
     @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-        System.out.println("hello world...");
+        System.out.println("service方法被调用了...");
     }
 
     @Override
@@ -32,6 +32,6 @@ public class ServletDemo01 implements Servlet {
 
     @Override
     public void destroy() {
-
+        System.out.println("destroy方法被调用了...");
     }
 }

@@ -9,6 +9,15 @@
         <servlet-name>ServletDemo01</servlet-name>
         <!--servlet-class:Servlet这个类的全限定名-->
         <servlet-class>com.charlie.servlet.ServletDemo01</servlet-class>
+
+        <!--配置当前servlet的初始化参数-->
+        <init-param>
+            <param-name>package</param-name>
+            <param-value>com.charlie.controller</param-value>
+        </init-param>
+
+        <!--配置init方法在服务器启动的时候调用。启动项越小，优先级越高-->
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <!--servlet-name: 必须和servlet标签里面的servlet-name一样-->
